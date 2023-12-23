@@ -1,0 +1,208 @@
+.section{
+    padding: 10rem;
+
+    @include respond(tab-land){
+        padding: 8rem;
+        flex-direction: column;
+    }
+
+    @include respond(tab-port){
+        padding: 4rem;
+    }
+
+    &__head-chef{  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__left, &__right{
+            width: 50%;
+
+            @include respond(tab-land){
+                width: 100%;
+            }
+        }
+
+        &__left{
+            text-align: center;
+            position: relative;
+
+            img{
+                border-radius: 50%;
+                max-width: 50%;
+
+                @include respond(tab-land){
+                    max-width: 40%;
+                    margin-bottom: 3rem;
+                }
+
+                @include respond(phone){
+                    max-width: 50%;
+                }    
+            }
+        }
+
+        &__right{
+            .chef-name{
+                font-size: 2.5rem;
+                color: $color-tertiary;
+                font-family: 'Kalnia', serif;
+                text-transform: uppercase;
+
+                @include respond(tab-land){
+                    text-align: center;
+                }
+
+                @include respond(phone){
+                    font-size: 2rem;
+                }
+            }
+            p{
+                @include respond(phone-small){
+                    word-break: break-all;
+                }
+            }
+        }
+    }
+
+    &__menu{
+        background-color: $color-primary;
+        display: flex;
+        justify-content:space-between;
+        gap: 20px;
+        align-items: center;
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+
+        @include respond(tab-land){
+            flex-direction: column-reverse;
+        }
+
+        @include respond(tab-port){
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        &-left, &-right{
+            width: 50%;
+            height: 50vh;
+
+            @media screen and (max-height: 50em) {
+                height: 90vh;
+            }
+
+            @include respond(tab-land){
+                width: 100%;
+            }
+        }
+
+        &-left{
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 0 4rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border-style: solid;
+            border-color: $color-primary-dark;
+            background-color: white;
+
+            p{
+                word-break: break-all;
+            }
+
+            .button{
+                align-self: flex-start;
+
+                @include respond(tab-land){
+                    align-self: center;
+                }
+            }
+
+            @include respond(tab-land){
+                padding: 4rem;
+                height: auto;
+            }
+        }
+
+        &-right{
+            background-image: url(../imgs/menu-showcase-small.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 6px;
+
+            // @media (min-resolution: 192dpi) and (min-width: 37.5em){
+            //     background-image: url(../imgs/menu-showcase.jpg);
+            // }
+
+            @include respond(tab-land){
+                height: 50vh;
+            }
+        }
+    }
+
+    &__testimonials{
+        padding: 10rem;
+        background-color: rgb(248, 248, 248);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3cpath d='M118.17 596.64C252.25 587.37 346.16 330.23 584.48 329.15 822.8 328.07 817.64 399.15 1050.79 399.15 1283.95 399.15 1399.22 329.34 1517.1 329.15' stroke='rgba(169%2c 179%2c 136%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M43.33 617.58C195.51 593.45 267.96 229.98 519.01 225.66 770.06 221.34 756.85 295.66 994.68 295.66 1232.52 295.66 1350.16 225.85 1470.36 225.66' stroke='rgba(169%2c 179%2c 136%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M799.94 604.97C905.48 574.03 870.92 275.89 1091.58 275.63 1312.25 275.37 1519.68 485.14 1674.87 488.43' stroke='rgba(169%2c 179%2c 136%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M624.74 595.06C753.98 556.6 682.53 204.38 980.6 189.76 1278.67 175.14 1511.5 61.48 1692.32 60.96' stroke='rgba(169%2c 179%2c 136%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M270.25 659.31C403.43 637.58 466.23 316.92 684.53 313.32 902.83 309.72 891.68 383.32 1098.82 383.32 1305.96 383.32 1408.06 313.57 1513.1 313.32' stroke='rgba(169%2c 179%2c 136%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+        background-size: cover;
+        background-attachment: fixed;
+
+        @include respond(phone){
+            padding: 5rem;
+        }
+
+        @include respond(phone-small){
+            padding: 2rem;
+        }
+
+        &-box{
+            position: relative;
+            &__left-btn{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                padding: 1rem 1.5rem;
+                border: none;
+                background-color: $color-primary;
+                color: $color-secondary;
+                transition: background-color .3s;
+                outline: none;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $color-primary-dark;
+
+                    @media only screen and (max-width: 56.25em),
+                    only screen and (hover: none){
+                        background-color: $color-primary;
+                    }
+                }
+            }
+
+            &__right-btn{
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0, -50%);
+                padding: 1rem 1.5rem;
+                border: none;
+                background-color: $color-primary;
+                color: $color-secondary;
+                transition: background-color .3s;
+                outline: none;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $color-primary-dark;
+
+                    @media only screen and (max-width: 56.25em),
+                    only screen and (hover: none){
+                        background-color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}

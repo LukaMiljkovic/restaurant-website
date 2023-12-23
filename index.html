@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Restaurant</title>
+</head>
+<body>
+    <nav class="navigation">
+        <span class="navigation__location"><i class="fi fi-rr-marker"></i>Višnjička 84, Belgrade 11060</span>
+        <a href="./index.html" class="link link--nav navigation__logo">
+            <img src="./imgs/logo-medium.png" alt="logo">
+        </a>
+        <a href="#" class="link link--nav">Menu</a>
+        <a href="#" class="link link--nav">Recommendations</a>
+        <a href="#" class="link link--nav">Contact</a>
+        <a href="#" class="link link--nav">About Us</a>
+        <i class="fi fi-rr-basket-shopping-simple"></i>
+        <input type="checkbox" id="menu"  class="navigation__check">
+        <label for="menu" class="navigation__menu">
+            <i class="fi fi-br-menu-burger"></i>
+        </label>
+        <nav class="navigation-mobile">
+            <span class="navigation__location__mobile"><i class="fi fi-rr-marker"></i></i>Višnjička 84, Belgrade 11060</span>
+            <a href="#" class="link link--nav">Menu</a>
+            <a href="#" class="link link--nav">Recommendations</a>
+            <a href="#" class="link link--nav">Contact</a>
+            <a href="#" class="link link--nav">About Us</a>  
+            <i class="fi fi-rr-basket-shopping-simple"></i>
+        </nav>
+    </nav>
+    <header class="header" id="top">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                Avenue
+            </h1>
+            <span class="u-margin-bottom heading-primary__subtext">
+                Your local food heaven
+            </span>
+            <a href="#" class="link button">Book In <i class="fi fi-br-angle-right"></i></a>
+            <a href="#" class="link button">Delivery <i class="fi fi-rr-shipping-fast"></i></i></a>
+        </div>
+    </header>
+    <main>
+        <section class="section section__head-chef">  
+            <div class="section__head-chef__left">
+                <picture>
+                    <source srcset="./imgs/head-chef-small.jpg 1x, ./imgs/head-chef.jpg 2x"  media="(max-width: 37.5em)">
+                    <img srcset="./imgs/head-chef-small.jpg 1x, ./imgs/head-chef.jpg 2x" alt="Full logo">
+                </picture>
+            </div>
+            <div class="section__head-chef__right">
+                <h2 class="u-margin-bottom heading-secondary">
+                    Meet the master <i class="fi fi-rr-hat-chef"></i></i>
+                </h2>
+                <p class="u-margin-bottom chef-name"><i class="fi fi-rr-flame"></i> Joshua Mendoza <i class="fi fi-rr-flame"></i></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quaerat natus tempora ducimus vel voluptas, distinctio autem suscipit odit consequatur obcaecati, exercitationem voluptatem, quis iure rerum earum eligendi aspernatur? Tempore dignissimos odit maiores, dolor labore quos pariatur! Maxime aperiam tempore nobis totam, voluptatem accusamus provident cumque possimus omnis blanditiis non placeat, numquam nulla accusantium pariatur atque minus rem, quisquam reiciendis autem voluptates quaerat. Deserunt sed, officiis repellat modi, magnam eligendi maxime vel quasi aliquid harum eius cum velit? Commodi perspiciatis sequi autem veritatis velit porro, optio nihil, eum esse, quia expedita ipsa quas eligendi mollitia fuga. Nulla maxime impedit ad!</p>
+            </div>
+        </section>
+        <section class="section section__menu">
+            <div class="section__menu-left">
+                <h2 class="u-margin-bottom heading-secondary">
+                   Our menus <i class="fi fi-rr-room-service"></i>
+                </h2>
+                <p class="u-margin-bottom">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. A aliquid voluptatibus nihil, voluptatum ducimus enim soluta! Nesciunt nihil rem minima minus possimus provident. Eligendi, corporis excepturi. Molestias, earum ipsum? Quos quam et placeat quasi quidem commodi eveniet maxime? Provident est aut consequatur dolorem, odit nostrum odio inventore natus, molestiae accusantium cumque vel quam, perferendis voluptates blanditiis ut officia repudiandae? Sed consequuntur deserunt in perferendis nisi numquam, incidunt adipisci enim quo quos alias tempore ex provident, nobis sunt consectetur nemo id!
+                </p>
+                <a href="#" class="link button button--border">View Menu <i class="fi fi-rr-utensils"></i></a>
+            </div>
+            <div class="section__menu-right">
+            </div>
+        </section>
+        <section class="section section__testimonials">
+            <h2 class="u-margin-bottom-m heading-secondary" style="text-align: center;">
+               What people said <i class="fi fi-rr-messages"></i>
+            </h2>
+            <div class="section__testimonials-box">
+                <div class="testimonial">
+                    <p class="testimonial__rating">
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                    </p>
+                    <p class="testimonial__name">
+                        Bob Miller
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At odit expedita doloribus alias rerum sunt architecto eum. Debitis tempora odit accusamus fuga accusantium similique ipsa quam. Rem labore nemo laborum sunt delectus quasi, architecto qui odio, excepturi officia laudantium quaerat.
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial__rating">
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                    </p>
+                    <p class="testimonial__name">
+                        Jenna Dunkins
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti mollitia ducimus soluta repellat quae facere repudiandae labore. Velit saepe quasi ad aut repellat quae, enim id. Laudantium, eos aut pariatur earum reiciendis debitis libero aspernatur!
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial__rating">
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                    </p>
+                    <p class="testimonial__name">
+                        Holley Gogins
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, sed.
+                    </p>
+                </div>
+                <button class="section__testimonials-box__left-btn" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="section__testimonials-box__right-btn" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="footer__navigation">
+            <p class="u-margin-bottom">Quick links</p>
+            <a href="#" class="link">Menu</a>
+            <a href="#" class="link">Recommendations</a>
+            <a href="#" class="link">Contact</a>
+            <a href="#" class="link">About Us</a>
+            <p>Copyright &copy; 2023</p>
+        </nav>
+        <nav class="footer__navigation">
+            <p class="u-margin-bottom">Looking for a job?</p>
+            <a href="#" class="link">Send us a CV</a>
+            <a href="#" class="link">Our team</a>
+            <a href="#" class="link">Contact HR</a>
+        </nav>  
+        <picture class="footer__logo">
+            <source srcset="./imgs/logo-medium-large.png 1x, ./imgs/logo-large.png 2x"  media="(max-width: 37.5em)">
+            <img srcset="./imgs/logo-medium-large.png 1x, ./imgs/logo-large.png 2x" alt="Full logo">
+        </picture>
+    </footer>
+    <a href="#top" class="link back-to-top"><i class="fi fi-rr-angle-small-up"></i></a>
+    <script src="https://kit.fontawesome.com/608f9b4085.js" crossorigin="anonymous"></script>
+    <script src="./js/slideshow.js"></script>
+</body>
+</html>

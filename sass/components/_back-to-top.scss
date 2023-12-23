@@ -1,0 +1,36 @@
+.back-to-top:link,
+.back-to-top:visited{
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+    border: 2px solid $color-secondary;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    color: $color-secondary;
+    transition: all .3s;
+
+    .fi{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -45%) scale(1.3);
+    }
+
+    &:hover{
+        background-color: $color-secondary;
+        color: $color-primary;
+        bottom: 3rem;
+        
+        @media only screen and (max-width: 56.25em),
+        only screen and (hover: none){
+            bottom: 2rem;
+            background-color: $color-primary;
+            color: $color-secondary;
+        }
+    }
+}

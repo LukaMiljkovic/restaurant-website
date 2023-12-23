@@ -1,0 +1,31 @@
+.header{
+    height: 70vh;
+    background-image: linear-gradient(to top, $color-primary, rgba(255,255,255, 0.8)), url(../imgs/heading.jpg);
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 6.7rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    animation: zoomInBackground 5s ease-in;
+
+    @include respond(phone){
+        animation: none;
+    }
+
+    @include respond(tab-port){
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);;
+    } 
+
+    &__text-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .button:not(:last-child){
+        margin-right: 2rem;
+    }
+}

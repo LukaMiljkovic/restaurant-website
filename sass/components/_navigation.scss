@@ -1,0 +1,156 @@
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: $color-secondary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    &__location{
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 2rem;
+        transform: translate(0, -50%);
+        color: $color-primary;
+        font-weight: bold;
+
+        .fi{
+            margin-right: .5rem;
+        }
+
+        @include respond(phone){
+            display: none;
+        }
+    }
+
+    .fi-rr-basket-shopping-simple{
+        color: $color-primary;
+    }
+
+    .link{
+        position: relative;
+        color: $color-primary;
+        &--nav{
+            &:not(:nth-of-type(1)){
+                &::after{
+                    position: absolute;
+                    content: "";
+                    display: inline;
+                    bottom: -.2rem;
+                    left: 0;
+                    width: 0;
+                    height: .2rem;
+                    background-color: $color-primary;
+                    transition: width .3s ease;
+                }
+            }
+
+            &:not(:last-child){
+                margin-right: 3rem;
+            }
+
+            &:last-child{
+                position: absolute;
+                right: 2rem;
+            }
+
+            &:hover{
+                color: $color-primary-light;
+                &::after{
+                    width: 100%;
+                }
+            } 
+        }
+        @include respond(tab-land){
+            &:not(:nth-of-type(1)):not(:nth-of-type(6)){
+                display: none;
+            }
+
+            &:last-child{
+                position: relative;
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    &__menu, &__check{
+        display: none;
+    }
+
+    &__menu{
+        z-index: 101;
+        margin-left: 3rem;
+        color: $color-primary;
+    }
+
+    &-mobile{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem;
+        z-index: 100;
+        background-color: $color-primary;
+        border: 10px double $color-primary-light;
+        transform: translateY(-24rem);
+        transition: all .4s;
+
+        .navigation__location__mobile{
+            font-family: 'Lato', sans-serif;
+            display: flex;
+            align-items: center;
+            color: $color-secondary;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            .fi{
+                margin-right: .5rem;
+            }
+        }
+
+        .fi-rr-basket-shopping-simple{
+            color: $color-secondary;
+        }
+
+        .link{
+            color: $color-secondary;
+            display: block !important;
+            margin-right: 0 !important;
+            &:not(:last-child){
+                margin-bottom: 1rem;
+            }
+
+            &:last-child{
+                right: 0 !important;
+                margin-left: 0 !important;
+            }
+        }
+    }
+
+    &__check:checked ~ &-mobile{
+        transform: translateY(0);
+        backdrop-filter: blur(10px);
+    }
+
+    &__check:checked + &__menu{
+        color: $color-secondary;
+    }
+
+    @include respond(tab-land){
+        justify-content: flex-end;
+
+        &__menu{
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@keyframes zoomInBackground {
+    0%{
+        background-size: 150%;
+    }
+
+    100%{
+        background-size: 100%;
+    }
+}
+
+@keyframes showTestimonial{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}

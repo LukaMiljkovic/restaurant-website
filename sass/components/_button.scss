@@ -1,0 +1,36 @@
+.button{
+    display: inline-block;
+    background-color: $color-primary;
+    padding: 1rem 3rem;
+    color: $color-secondary !important;
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.5);
+    transition: all .3s;
+
+    &:hover{
+        background-color: $color-secondary;
+        color: $color-primary !important;
+        transform: translateY(-.7rem);
+
+        @media only screen and (max-width: 56.25em),
+        only screen and (hover: none){
+            background-color: $color-primary;
+            color: $color-secondary !important;
+            transform: translateY(0);
+        }
+    }
+
+    &:active{
+        transform: translateY(-.3rem);
+        box-shadow: 0 2rem 4rem rgba(0,0,0,.8);
+    }
+
+    i{
+        margin-left: 1rem;
+        float: right;
+    }
+
+    &--border{
+        border: 2px solid $color-primary;
+    }
+}

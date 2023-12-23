@@ -1,0 +1,29 @@
+.testimonial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid $color-primary;
+    background-color: white;
+    border-radius: 5px;
+    width: 80rem;
+    padding: 5rem;
+    position: relative;
+    animation: showTestimonial 1s ease;
+
+    @include respond(tab-port){
+        width: 50rem;
+    }
+    
+    @include respond(phone){
+        width: 100%;
+    }
+
+    &__rating{
+        color: darken($color-secondary, 20);
+    }
+
+    &__name{
+        font-size: 2rem;
+        color: $color-tertiary;
+    }
+}
